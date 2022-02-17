@@ -187,7 +187,7 @@ def login():
         cursor.execute(com_checklogin)
         result_checklogin = cursor.fetchall()
 
-        print(result_checklogin)
+        
 
         for cont in range(len(result_checklogin)):
 
@@ -372,7 +372,7 @@ def deletar():
         item_selecionado = tabela_estoque.selection()[0]
         valores2 = tabela_estoque.item(item_selecionado, 'values')
 
-        print(valores2[0])
+       
 
         comando_deletar = f'delete from estoque where codigo = "{valores2[0]}";'
         cursor.execute(comando_deletar)
@@ -417,7 +417,7 @@ def novo_produto():
     novo_nome = adcionar_nome.get()
     novo_quant = adcionar_quant.get()
     novo_preco = adcionar_preco.get()
-    print(novo_preco, novo_nome, novo_quant)
+    
 
     if novo_nome == '' or novo_quant == '' or novo_preco == '':
         messagebox.showerror(title='Aviso', message='Todos os campos devem está preenchidos.')
